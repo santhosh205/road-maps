@@ -1,0 +1,32 @@
+IIT Kharagpur
+
+  Nalanda - 22.3156243, 87.3168871
+  Takshashila - 22.3170883, 87.3117399
+  Vikramshila - 22.3159447, 87.3110890
+  Electronics Dep - 22.3210162, 87.3100179
+  Tikka - 22.3168501, 87.3072713
+  Tech Market - 22.3145840, 87.3002152
+  Frank Ross - 22.3168479, 87.3006084
+  PFC - 22.3189480, 87.3000540
+  LBS - 22.3213263, 87.2995681
+  JCB Canteen - 22.3204976, 87.3025560
+  Amul - 22.3196428, 87.3039924
+  MMM Juice Shop - 22.3215546, 87.3021081
+  Basketball Court - 22.3203388, 87.3035699
+  RK - 22.3210512, 87.3073370
+
+- The above are the gps coordinates of the regularly visited places in iit kharagpur.
+- Our job is to get a complete road network covering these places.
+- For that, we use google's snap roads api to get a travelling route which probably includes all roads.
+- Here, what we feed as input to the api is all the the above coordinates and the incrementals obtained.
+- First, we calculate the max and min x & y coordinates. 
+- Then, we create all the grid points filling the entire region bounded by the max and min coordinates. 
+- These grid points are created with some interval difference in the x & y coordinates. 
+- Like, if the first point is (1.2,2.2), then the next points will be (1.3, 2.2), (1.2, 2.3), (1.3, 2.3) and so on.
+- Number of grid points created must be less than 100. 
+- So, the given user points must be close to each other for accuracy of road network and if we increase the interval difference then the road network's accuracy will be compromised.
+- This will be drawn on the map using with some red or other color and then using image processing and interpolation algorithms we can extract the road networks. 
+- Also, we can just use the outputed coordinates to build the road network. There are many ways to do that.
+- Taking closer points can give us an almost accurate road map.
+
+"https://www.maps.ie/" would be helpful in developing the software.
